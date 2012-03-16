@@ -1,0 +1,26 @@
+Source: pkt-bundle-ubuntu-kernel-build-deps
+Section: misc
+Priority: extra
+Maintainer: Pantelis Koukousoulas <pktoss@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: http://github.com/pkt/pkt-bundle-packages
+#Vcs-Git: http://github.com/pkt/pkt-bundle-packages
+
+Package: pkt-bundle-ubuntu-kernel-build-deps
+Architecture: all
+Depends: ${misc:Depends},
+ fakeroot,
+ build-essential,
+ crash,
+ kexec-tools,
+ makedumpfile,
+ kernel-wedge,
+ git-core,
+ libncurses5,
+ libncurses5-dev,
+ libelf-dev,
+ asciidoc,
+ binutils-dev
+Description: Metapackage providing build dependencies for ubuntu kernel.
+ A metapackage providing build dependencies for ubuntu kernel (from git).
