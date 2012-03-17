@@ -5,7 +5,7 @@ packages = $(wildcard pkt-bundle*)
 release = `lsb_release -cs`
 
 all: $(packages)
-	@set -e; for p in $(packages); do cd $$p ; debuild -S -sa ; done
+	@set -e; for p in $(packages); do cd $$p ; debuild -S -sa ; cd - ; done
 
 publish: $(uploads)
 
