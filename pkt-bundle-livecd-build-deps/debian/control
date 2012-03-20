@@ -1,0 +1,36 @@
+Source: pkt-bundle-livecd-build-deps
+Section: misc
+Priority: extra
+Maintainer: Pantelis Koukousoulas <pktoss@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: http://github.com/pkt/pkt-bundle-packages
+#Vcs-Git: http://github.com/pkt/pkt-bundle-packages
+
+Package: pkt-bundle-livecd-build-deps
+Architecture: all
+Depends: ${misc:Depends},
+ debhelper (>= 8.0.0),
+ dpkg-dev,
+ perl,
+ xkb-data,
+ lsb-release,
+ desktop-file-utils,
+ debootstrap,
+ rsync,
+ python-minimal | python,
+ procps,
+ squashfs-tools (>= 1:3.3-1),
+ grep-dctrl,
+ fdupes,
+ lzma,
+ e2fsprogs,
+ germinate ( >= 1.25.1),
+ apt-utils,
+ gnupg,
+ live-build (>= 3.0~a22-1ubuntu1)
+Recommends: syslinux-themes-ubuntu, gfxboot-theme-ubuntu, memtest86+, genisoimage, syslinux
+Suggests: partimage
+Description: Dependencies for building LiveCDs
+ This metapackage collects the dependencies required for building ubuntu-derivative
+ Live CDs.
